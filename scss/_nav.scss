@@ -1,0 +1,117 @@
+#nav1{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: .7s;
+  }
+  label.logo{
+    position: absolute;
+    top: 20px;
+    padding: 0 30px;
+    
+  }
+  #nav1 ul{
+    float: right;
+    word-spacing: 40px;
+  }
+  #nav1 ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  #nav1 ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: darkgreen;
+    font-weight:bold;
+  }
+  a.active,a:hover{
+    opacity: 0.9;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    line-height: 90px;
+    float: right;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-top: 10px;
+    }
+    #nav1 ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      z-index: 2;
+    }
+    #nav1 ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    #nav1 ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      background-color: darkgrey;
+    }
+    #check:checked ~ ul{
+      left: 0;
+      opacity: 0.8;
+    }
+  }
+  
+.affix {
+  padding: 0;
+  background-color: darkgreen;
+}
+
+#nav1 p{
+  position: relative;
+  left: 50%;
+  top: 20px;
+  transform: translate(-20%);
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 400;
+  color: honeydew;
+  width: 140px;
+}
+
+#nav1 span{
+  position: relative;
+  left: 27%;
+  font-size: 15px;
+  color: honeydew;
+  font-style: italic;
+  font-weight: 400;
+}
+  
