@@ -11,56 +11,146 @@ body{
 }
 
    .header{
-    background: url(../images/machineworking.jpg) no-repeat;
-    background-position-y: -40px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 700px;
-    // height: 750px;
-    // mix-blend-mode: color-burn;
-    background-attachment: fixed;
-   }
-   @media (max-width: 458px) {
+        max-width: 100%;
+        // height: 750px;
+        // mix-blend-mode: color-burn;
+
+            #cover_photo{
+                background: url(../images/machineworking.jpg) no-repeat;
+                background-position-y: -40px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                height: 800px;
+                margin-bottom: 50px;
+            }
+                
+
+
+            .tittle h1{
+                position: absolute;
+                top: 315px;
+                left: 50px;
+                    
+                //  @include transform(rotate(0deg));
+                    font-size: 50px;
+                    font-weight: bold;
+                    text-shadow: 5px 5px 20px rgb(23, 133, 23);
+                    text-transform: uppercase;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    color: ghostwhite;  
+                    z-index: 1; 
+            }       
+    }
+
+   @media (max-width: 500px) {
        .header{
-           width: 418px;
+           width: auto;
+
+           #cover_photo{
+           background-position-x: -300px;
+           orientation: landscape;
+           }
        }
+
+
        
    }
    
-  .tittle h1{
-     position: absolute;
-     top: 315px;
-     left: 50px;
-         
-        //  @include transform(rotate(0deg));
-         font-size: 50px;
-         font-weight: bold;
-          text-shadow: 5px 5px 20px rgb(23, 133, 23);
-          text-transform: uppercase;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-          color: ghostwhite;  
-          z-index: 1; 
+
+
+// Welcome status
+.welcome{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    width: 100%;
+    height: auto;
+    background: darkgray;
+    padding-bottom: 100px;
+    padding-top: 150px;
+
+    #welcome-tittle{
+        padding: 6px 30px;
+
+
+        h1{
+            font-size: 40px;
+            vertical-align: middle;
+            padding-bottom: 30px;
+        }
+        p{
+            font-size: 20px;
+        }
+
+        img{
+            vertical-align: baseline;
+        }
+        #p-1{
+            width: 400px;
+        }
+        
+    }
+     #photo img{
+        position: relative;
+        // background-image: url(../images/welcomen.jpg);
+        background-repeat: no-repeat;
+        top: 40px;
+        box-shadow: 10px 10px #00000021;
+        border-radius: 50px;
+        width: 500px;
+        height: 400px;
+    }
+
+}
+
+@media (max-width: 860px) {
+    .welcome #photo{
+        display: inline;
+    }
 }
 
 
-h2{
-    font-size: 40px;
-    margin: 30px;
-    padding: 30px;
-    font-family: Copperplate, Papyrus, fantasy;
-    color: rgb(111, 153, 37);
-    text-shadow: darkred;
-    text-align: center;
-    text-transform: uppercase;
+@media (max-width: 415px) {
+    .welcome{
+        position: relative;
+        padding-left: 20px;
+
+        #welcome-tittle{
+
+            #p-1{
+                 width: 300px;
+               
+            }
+        }
+        #photo{
+            padding-right: 30px;
+        }
+
+        #photo img{
+            width: 350px;
+            height: 300px;
+        }
+    }
 }
 
-.logo{
-    float: left;
-    padding: 12px;
-}
 
 
 //  Our Project
+#we_provide{
+    text-align: center;
+    color: black;
+    text-shadow: 2px 10px 5px black;
+    font-size: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
 .box-container{
     display: flex;
     flex-direction: row;
@@ -72,38 +162,58 @@ h2{
     padding-bottom: 100px;
 
        .box{
-           height: 360px;
-           width: 408px;
-           margin: 20px;
-           box-sizing: border-box;
-           border-radius: 10px 20px 50px;
-           background: rgb(58,217,37);
-            background: radial-gradient(circle, rgba(58,217,37,1) 0%, rgba(51,119,7,1) 54%);  
-            box-shadow: 15px 15px 30px black;    
-        }
-        p{
-            text-align: left;
-            margin: 20px;
-        }
-           
+                height: 360px;
+                width: 404px;
+                margin: 20px;
+                box-sizing: border-box;
+                border-radius: 10px 20px 50px;
+                background: rgb(58,217,37);
+                    background: radial-gradient(circle, rgba(58,217,37,1) 0%, rgba(51,119,7,1) 54%);  
+                    box-shadow: 15px 15px 30px black;    
+                
+                p{
+                    text-align: left;
+                    margin: 20px;
+                }
+                
 
-       .img1{
-           
-           background-size: cover;
-       }
-       .img2{
-           background-size: cover;
-       }
-       .img3{
-           background-size: cover;
-       }
-       .img4{
-           background-size: cover;
-        }
-        .img1, .img2, .img3, .img4, .img5, .img6{
-            img{
-                border-radius: 10px 20px 20px 20px
+            .img1 img{
+                background-size: cover;
+                width: 404px;
+                height: 203px;
             }
+            .img2 img{
+                background-size: cover;
+                width: 404px;
+                height: 203px;
+            }
+            .img3 img{
+                background-size: cover;
+                width: 404px;
+                height: 203px;
+            }
+            .img4 img{
+                background-size: cover;
+                width: 404px;
+                height: 203px;
+            }
+            .img5 img{
+                background-size: cover;
+                width: 404px;
+                height: 203px;
+            }
+            .img6 img{
+                background-size: cover;
+                width: 404px;
+                height: 203px;
+            }
+            
+            .img1, .img2, .img3, .img4, .img5, .img6{
+                    img{
+                        border-radius: 10px 20px 20px 20px;
+                    }
+                }
+            
         }
            
        #tittle-project{
@@ -111,22 +221,26 @@ h2{
         font-family: cursive;
         font-weight: bold;
     } 
-    #projectbt{
-        padding: 5px;
-        float: right;
-        background-color: rgb(140, 185, 140);
-        text-decoration: none;
-        text-transform: uppercase;
-        border-radius: 10px;
-        border: none;
-    
-        a {
-            text-decoration: none;
-            font-weight: bold;
-        }
-    }
 
 }
+
+@media (max-width: 450px) {
+    .box-container {
+         padding-left: 20px;
+    }
+    .box-container .box{
+        height: 300px;
+        width: 350px;
+
+        .img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img{
+            width: 350px;
+        }
+    }
+    
+    
+}
+
+
 
  
 // Contact
@@ -251,37 +365,43 @@ h2{
     /* Pest Control */
 #pest_control{
     padding: 1% 7%;
+    display: flex;
     
 }
 
-#pest_control article{
-    width:33%;
+#pest_control #article-1{
     display: inline-block;
     position: relative;
+
+    h1{
+        font-size: 42px;
+        color: #0d0d0d;
+        font-weight: 700;
+        line-height: 52px;
+        margin-bottom: 32px;
+    }
+
+    p{
+        width: 50%;
+        margin-bottom:35px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        margin: 0 0 15px 0;
+    }
 }
 
-#pest_control article h1{
-    font-size: 42px;
-    color: #0d0d0d;
-    font-weight: 700;
-    line-height: 52px;
-    margin-bottom: 32px;
+
+#pest_control #article-2 img{
+    position:relative;
+    right: 120px;
+    height: 450px;
 }
 
-#pest_control article p{
-    margin-bottom:35px;
-    font-size: 15px;
-    color: #4e4e4e;
-    font-weight: 400;
-    line-height: 25px;
-    margin: 0 0 15px 0;
-}
-
-#pest_control article #center_img{
-    width:80%;
-    position: relative;
-    top: -210px;
-    border-radius: 30px 10px;
+@media (max-width: 1300px) {
+    #pest_control #article-2 img{
+        display: none;
+    }
 }
 
 @media (max-width: 500px) {
@@ -289,101 +409,30 @@ h2{
         display: inline;
     }
 
-    #pest_control article h1{
-        font-size: 22px;
-        font-size: 22px;
-         padding: 0;
-         margin: 0;
-         font-weight: 900;
+    #pest_control #article-1 h1{
+        font-size: 26px;
+        padding: 0;
+        margin: 0;
+        font-weight: 900;
     }
-    
 
-     #pest_control article #center_img{
-         display: contents;
+    #pest_control #article-1 p{
+        font-size: 22px;
+    }
+
+     #pest_control #article-2 #center_img{
+         display: block;
      }
 
 }
-@media (max-width: 800px) {
 
-    #pest_control article #center_img{
-         display: contents;
-     }
+@media (max-width: 500px) {
+    #article-3 {
+        padding-top: 30px;
+        padding-left: 30px;
+    }
 }
 
-// Welcome status
-.welcome{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-flow: wrap;
-    width: 100%;
-    height: auto;
-    background: darkgray;
-    padding-bottom: 100px;
-
-    #welcome-tittle{
-        padding: 6px 30px;
-
-
-        h1{
-            font-size: 40px;
-            vertical-align: middle;
-            padding-bottom: 30px;
-        }
-        p{
-            font-size: 20px;
-        }
-
-        img{
-            vertical-align: baseline;
-        }
-        #p-1{
-            width: 400px;
-        }
-        #p-2{
-            span{
-                font-size: 20px;
-                font-weight: 700;
-            }
-            ul{
-                list-style-type: none;
-            }
-            li{
-                padding: 5px;
-                word-spacing: 10px;
-            }
-        }
-        
-    }
-    #photo{
-        position: relative;
-        height: 300px;
-        width: 470px;
-        background-image: url(../images/welcomen.jpg);
-        background-repeat: no-repeat;
-        top: 40px;
-        box-shadow: 10px 10px #00000021;
-        border-radius: 20px;
-    }
-
-}
-@media (max-width: 415px) {
-    .welcome{
-        position: relative;
-        padding-left: 20px;
-
-        #welcome-tittle{
-
-            #p-1{
-                 width: 300px;
-               
-            }
-        }
-    }
-   
-    
-    
-}
 
 // About company post about.html
 .about-company{
@@ -409,7 +458,6 @@ h2{
             
         }
     }
-
 }
 
 
