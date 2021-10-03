@@ -1,89 +1,158 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400&family=PT+Sans+Narrow:wght@700&family=Yusei+Magic&display=swap");
 .header {
   max-width: 100%;
+  overflow-x: hidden;
 }
 
-.header #nav1 {
-  position: absolute;
+.header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 8vh;
+  background-color: #0f5a16;
   width: 100%;
-  z-index: 100;
-  -webkit-transition: .7s;
-  transition: .7s;
 }
 
-.header #nav1 label.logo {
-  position: absolute;
-  top: 20px;
-  padding: 0 30px;
-  height: 70;
-  background-color: darkgrey;
-  padding-top: 2px;
-  opacity: 0.9;
-  border-radius: 100px;
-}
-
-.header #nav1 label.logo img {
-  height: 60px;
-}
-
-.header #nav1 ul {
-  float: right;
-  word-spacing: 40px;
-}
-
-.header #nav1 ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-  top: 10px;
-  position: relative;
-}
-
-.header #nav1 ul li a {
-  color: black;
-  font-size: 17px;
-  padding: 7px 13px;
-  border-radius: 5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: darkgray;
-  font-weight: bold;
-}
-
-.header #nav1 a:hover {
-  opacity: 0.7;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.header #nav1 .checkbtn {
-  font-size: 30px;
+.header .logo {
   color: white;
-  line-height: 90px;
-  float: right;
-  margin-right: 40px;
-  margin-bottom: 50px;
-  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.header .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 35%;
+  padding-top: 15px;
+}
+
+.header .nav-links li {
+  list-style: none;
+}
+
+.header .nav-links a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: 600;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.header .transform-phone {
+  display: none;
   cursor: pointer;
-  display: none;
 }
 
-.header #nav1 #check {
-  display: none;
+.header .transform-phone div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
 }
 
-.header #cover_photo {
+@media screen and (max-width: 858px) {
+  .header body {
+    overflow-x: hidden;
+  }
+  .header .nav-links {
+    position: fixed;
+    right: 0px;
+    height: 400px;
+    top: 8vh;
+    background-color: #0f5a16;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    overflow: hidden;
+    z-index: 100;
+  }
+  .header .nav-links li {
+    opacity: 0;
+  }
+  .header .transform-phone {
+    display: block;
+  }
+}
+
+.header .nav-active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#cover_photo {
   background: url(../images/machineworking.jpg) no-repeat;
   background-position-y: -40px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: absolute;
   height: 800px;
   margin-bottom: 50px;
   background-position-y: -170px;
 }
 
-.header .tittle h1 {
+.tittle h1 {
   position: absolute;
   top: 315px;
   left: 50px;
@@ -97,84 +166,13 @@
 }
 
 @media (max-width: 500px) {
-  .header .header {
-    width: auto;
+  .header {
+    width: 100%;
   }
-  .header .header #cover_photo {
+  .header #cover_photo {
     background-position-x: -300px;
     orientation: landscape;
   }
-}
-
-@media (max-width: 850px) {
-  .header #cover_photo {
-    background-position-x: -300px;
-  }
-}
-
-@media (max-width: 952px) {
-  .header label.logo {
-    font-size: 30px;
-    padding-top: 10px;
-  }
-  .header #nav1 ul li a {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 858px) {
-  .header #nav1 .checkbtn {
-    display: block;
-  }
-  .header #nav1 ul {
-    position: fixed;
-    width: 100%;
-    height: 45vh;
-    background: #2c3e50;
-    top: -500px;
-    text-align: center;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    z-index: 2;
-  }
-  .header #nav1 ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  .header #nav1 ul li a {
-    font-size: 20px;
-  }
-  .header a:hover, .header a.active {
-    background: none;
-    background-color: darkgrey;
-  }
-  .header #check:checked ~ ul {
-    top: 100px;
-    opacity: 0.8;
-  }
-}
-
-.header #nav1 p {
-  position: relative;
-  left: 50%;
-  top: 20px;
-  -webkit-transform: translate(-20%);
-          transform: translate(-20%);
-  font-size: 15px;
-  font-style: italic;
-  font-weight: 400;
-  color: honeydew;
-  width: 140px;
-}
-
-.header #nav1 span {
-  position: relative;
-  left: 27%;
-  font-size: 15px;
-  color: honeydew;
-  font-style: italic;
-  font-weight: 400;
 }
 
 .w3hubs-footer {

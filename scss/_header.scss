@@ -1,87 +1,122 @@
 
-
-
 .header{
    max-width: 100%;
+   overflow-x: hidden;
 
-    #nav1{
-      position: absolute;
+    nav{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 8vh;
+      background-color: #0f5a16;
       width: 100%;
-      z-index: 100;
-      transition: .7s;
-      // background-color: rgb(9, 122, 9);
-    
-    label.logo{
-      position: absolute;
-      top: 20px;
-      padding: 0 30px;
-      height: 70;
-      background-color: darkgrey;
-      padding-top: 2px;
-      opacity: 0.9;
-      border-radius: 100px;
     }
-    label.logo img{
-      height: 60px;
-    }
-      
-    ul{
-      float: right;
-      word-spacing: 40px;
-    }
-    ul li{
-      display: inline-block;
-      line-height: 80px;
-      margin: 0 5px;
-      top: 10px;
-      position: relative;
-    }
-    ul li a{
-      color: rgb(0, 0, 0);
-      font-size: 17px;
-      padding: 7px 13px;
-      border-radius: 5px;
-      text-transform: uppercase;
-      text-decoration: none;
-      background-color: darkgray;
-      font-weight:bold;
-    }
-    a:hover{
-      opacity: 0.7;
-      transition: .5s;
-    }
-    .checkbtn{
-      font-size: 30px;
+    .logo{
       color: white;
-      line-height: 90px;
-      float: right;
-      margin-right: 40px;
-      margin-bottom: 50px;
-      padding-top: 20px;
+      padding-left: 20px;
+    }
+
+    .nav-links{
+      display: flex;
+      justify-content: space-around;
+      width: 35%;
+      padding-top: 15px;
+    }
+
+    .nav-links li{
+      list-style: none;
+    }
+
+    .nav-links a{
+      color: white;
+      text-decoration: none;
+      letter-spacing: 3px;
+      font-weight: 600;
+      font-size: 17px;
+      text-transform: uppercase;
+    }
+
+    .transform-phone{
+      display: none;
       cursor: pointer;
-      display: none;
     }
-    #check{
-      display: none;
+
+    .transform-phone div{
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
     }
+
+  @media screen and (max-width: 858px) {
+    body{
+        overflow-x: hidden;
+    }
+    
+    .nav-links{
+        position: fixed;
+        right: 0px;
+        height: 400px;
+        top: 8vh;
+        background-color: #0f5a16;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        overflow: hidden;
+        z-index: 100;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .transform-phone{
+        display: block;
+    }
+
+  }
+  .nav-active{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes navLinkFade {
+  from{
+      opacity: 0;
+      transform: translateX(50px);
+  }    
+  to{
+      opacity: 1;
+      transform: translateX(0px);
+  }
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 
+
+// fotoja cover
 #cover_photo{
   background: url(../images/machineworking.jpg) no-repeat;
   background-position-y: -40px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: absolute;
   height: 800px;
   margin-bottom: 50px;
   background-position-y: -170px;
 }
 
-
-  
-
-
+// GARDEN titulli
 .tittle h1{
   position: absolute;
   top: 315px;
@@ -99,7 +134,7 @@
 
 @media (max-width: 500px) {
   .header{
-      width: auto;
+      width: 100%;
 
       #cover_photo{
       background-position-x: -300px;
@@ -108,81 +143,5 @@
   }
 }
 
-@media (max-width: 850px) {
-  #cover_photo {
-    background-position-x: -300px;
-  }
-}
 
-
-  @media (max-width: 952px){
-    label.logo{
-      font-size: 30px;
-      padding-top: 10px;
-    }
-    #nav1 ul li a{
-      font-size: 16px;
-    }
-  }
-  @media (max-width: 858px){
-    #nav1 .checkbtn{
-      display: block;
-    }
-    #nav1 ul{
-      position: fixed;
-      width: 100%;
-      height: 45vh;
-      background: #2c3e50;
-      top: -500px;
-      // left: -100%;
-      text-align: center;
-      transition: all .5s;
-      z-index: 2;
-    }
-    #nav1 ul li {
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-    }
-    #nav1 ul li a{
-      font-size: 20px;
-    }
-    a:hover,a.active{
-      background: none;
-      background-color: darkgrey;
-    }
-    #check:checked ~ ul{
-      // left: 0;
-      top: 100px;
-      opacity: 0.8;
-    }
-  }
-  
-// .affix {
-//   padding: 0;
-//   background-color: darkgreen;
-// }
-
-#nav1 p{
-  position: relative;
-  left: 50%;
-  top: 20px;
-  transform: translate(-20%);
-  font-size: 15px;
-  font-style: italic;
-  font-weight: 400;
-  color: honeydew;
-  width: 140px;
-}
-
-#nav1 span{
-  position: relative;
-  left: 27%;
-  font-size: 15px;
-  color: honeydew;
-  font-style: italic;
-  font-weight: 400;
-}
-  
-}
 
