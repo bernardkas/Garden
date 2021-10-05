@@ -3,7 +3,7 @@
 
 if (isset($_POST['submit'])) {
     $name = $_POST['fullname'];
-    $email = $_POST['emailaddress'];
+    $visitor_email = $_POST['emailaddress'];
     $tel = $_POST['tel'];
     $message = $_POST['message'];
 
@@ -11,8 +11,8 @@ if (isset($_POST['submit'])) {
     $headers = "From: Garden";
     $txt = "You have recived an e-mail from ".$email.".\n\n".$message;
 
-    mail($mailto, $email, $txt, $headers);
-    header("Location: index.html?mailsend");
+    mail($mailto, $txt, $headers);
+    header("Location: index.html");
 }
 
 ?>
