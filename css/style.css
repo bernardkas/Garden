@@ -2,6 +2,7 @@
 .header {
   max-width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 .header nav {
@@ -63,10 +64,10 @@
     overflow-x: hidden;
   }
   .header .nav-links {
-    position: fixed;
+    position: absolute;
     right: 0px;
     height: 400px;
-    top: 8vh;
+    top: 50px;
     background-color: #0f5a16;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -143,13 +144,13 @@
 
 #cover_photo {
   background: url(../images/machineworking.jpg) no-repeat;
-  background-position-y: -40px;
+  background-position-y: 0px;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: absolute;
-  height: 800px;
+  height: 500px;
   margin-bottom: 50px;
-  background-position-y: -170px;
+  background-position-y: center;
 }
 
 .tittle h1 {
@@ -492,7 +493,7 @@ body {
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 550px) {
   .welcome {
     position: relative;
     padding-left: 20px;
@@ -504,7 +505,7 @@ body {
     padding-right: 30px;
   }
   .welcome #photo img {
-    width: 350px;
+    width: 300px;
     height: 300px;
   }
 }
@@ -608,10 +609,10 @@ body {
   }
   .box-container .box {
     height: 300px;
-    width: 350px;
+    width: 300px;
   }
   .box-container .box .img1 img, .box-container .box .img2 img, .box-container .box .img3 img, .box-container .box .img4 img, .box-container .box .img5 img, .box-container .box .img6 img {
-    width: 350px;
+    width: 300px;
   }
 }
 
@@ -781,7 +782,7 @@ body {
 
 @media (max-width: 500px) {
   #pest_control {
-    display: inline;
+    display: block;
   }
   #pest_control #article-1 h1 {
     font-size: 26px;
@@ -791,6 +792,7 @@ body {
   }
   #pest_control #article-1 p {
     font-size: 22px;
+    width: 70%;
   }
   #pest_control #article-2 #center_img {
     display: block;
@@ -801,6 +803,10 @@ body {
   #article-3 {
     padding-top: 30px;
     padding-left: 30px;
+  }
+  #article-3 p {
+    width: 70%;
+    font-size: 20px;
   }
 }
 

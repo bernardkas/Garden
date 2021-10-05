@@ -63,7 +63,7 @@ body{
 }
 
 
-@media (max-width: 415px) {
+@media (max-width: 550px) {
     .welcome{
         position: relative;
         padding-left: 20px;
@@ -80,7 +80,7 @@ body{
         }
 
         #photo img{
-            width: 350px;
+            width: 300px;
             height: 300px;
         }
     }
@@ -180,10 +180,10 @@ body{
     }
     .box-container .box{
         height: 300px;
-        width: 350px;
+        width: 300px;
 
         .img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img{
-            width: 350px;
+            width: 300px;
         }
     }
     
@@ -364,7 +364,7 @@ body{
 
 @media (max-width: 500px) {
     #pest_control{
-        display: inline;
+        display: block;
     }
 
     #pest_control #article-1 h1{
@@ -376,6 +376,7 @@ body{
 
     #pest_control #article-1 p{
         font-size: 22px;
+        width: 70%;
     }
 
      #pest_control #article-2 #center_img{
@@ -388,6 +389,11 @@ body{
     #article-3 {
         padding-top: 30px;
         padding-left: 30px;
+
+        p{
+            width: 70%;
+            font-size: 20px;
+        }
     }
 }
 

@@ -2,6 +2,7 @@
 .header{
    max-width: 100%;
    overflow-x: hidden;
+   position: relative;
 
     nav{
       display: flex;
@@ -51,13 +52,14 @@
   @media screen and (max-width: 858px) {
     body{
         overflow-x: hidden;
+
     }
     
     .nav-links{
-        position: fixed;
+        position: absolute;
         right: 0px;
         height: 400px;
-        top: 8vh;
+        top: 50px;
         background-color: #0f5a16;
         display: flex;
         flex-direction: column;
@@ -107,13 +109,13 @@
 // fotoja cover
 #cover_photo{
   background: url(../images/machineworking.jpg) no-repeat;
-  background-position-y: -40px;
+  background-position-y: 0px;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: absolute;
-  height: 800px;
+  height: 500px;
   margin-bottom: 50px;
-  background-position-y: -170px;
+  background-position-y: center;
 }
 
 // GARDEN titulli
@@ -142,6 +144,8 @@
       }
   }
 }
+
+
 
 
 

@@ -13,6 +13,7 @@ const navSlide = () => {
     const phone = document.querySelector('.transform-phone');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li')
+    
 
     phone.addEventListener('click', () => {
         // Toggle Now
@@ -27,11 +28,27 @@ const navSlide = () => {
             }
         });
         
+        
           //ikon animation
         phone.classList.toggle('toggle');
     });
-  
-    
 }
 
 navSlide();
+
+
+
+// ANIMATE ON SCROLL
+
+var tl = new TimelineMax({onUpdate:updatePercentage});
+const controller = new ScrollMagic.controller();
+
+tl.from("welcome", .5, {y:200, opacity: 0});
+
+
+
+
+
+  
+    
+
