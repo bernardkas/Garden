@@ -119,6 +119,7 @@
 	margin: 0px 10px;
 	border-radius: 100%;
 	background:#fff; 
+	list-style: none;
 }
 .w3hubs-footer .w3hubs-nav2 ul li a{
 	text-decoration: none;
@@ -212,8 +213,9 @@ color: #fff
 		font-size: 20px;
 	}
 	.w3hubs-footer .w3hubs-icon ul li{
-	width: 40px;
+		width: 40px;
 		height: 40px;
+		list-style: none;
 	}
 	}
 	@media(max-width: 375px){

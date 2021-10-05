@@ -307,6 +307,7 @@
   margin: 0px 10px;
   border-radius: 100%;
   background: #fff;
+  list-style: none;
 }
 
 .w3hubs-footer .w3hubs-nav2 ul li a {
@@ -415,6 +416,7 @@
   .w3hubs-footer .w3hubs-icon ul li {
     width: 40px;
     height: 40px;
+    list-style: none;
   }
 }
 
@@ -621,7 +623,6 @@ body {
   padding-top: 20px;
   background-position: center;
   background-image: url(../images/form.jpg);
-  background-position-x: -100px;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -694,7 +695,6 @@ body {
 }
 
 #fourm:hover {
-  background-color: #cf5f1e;
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
