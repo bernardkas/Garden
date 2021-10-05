@@ -67,7 +67,7 @@
     position: absolute;
     right: 0px;
     height: 400px;
-    top: 50px;
+    top: 64px;
     background-color: #0f5a16;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -608,7 +608,7 @@ body {
     padding-left: 20px;
   }
   .box-container .box {
-    height: 300px;
+    height: 350px;
     width: 300px;
   }
   .box-container .box .img1 img, .box-container .box .img2 img, .box-container .box .img3 img, .box-container .box .img4 img, .box-container .box .img5 img, .box-container .box .img6 img {
