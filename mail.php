@@ -1,21 +1,18 @@
+
 <?php
-//get data from form  
-$text = $_POST['name'];
-$text = $_POST['lastname'];
-$email= $_POST['emailaddress'];
-$number = $_POST['tel'];
-$message= $_POST['message'];
 
-$to = "berni.kastrati@gmail.com";
+if (isset($_POST['submit'])) {
+    $name = $_POST['fullname'];
+    $email = $_POST['emailaddress'];
+    $tel = $_POST['tel'];
+    $message = $_POST['message'];
 
-$subject = "Mail From Garden";
-$txt ="Name = ". $text . "\r\n  Email = " . $email . "\r\n Message =" . $message ."
-    \r\n Lastname =". $text ." \r\n Number =" . $number;
-$headers = "From: noreply@garden.com" . "\r\n" .
-"CC: somebodyelse@example.com";
-if($email!=NULL){
-    mail($to,$subject,$txt,$headers);
+    $mailto = "berni.kastrati@hotmail.com";
+    $headers = "From: Garden";
+    $txt = "You have recived an e-mail from ".$email.".\n\n".$message;
+
+    mail($mailto, $email, $txt, $headers);
+    header("Location: index.html");
 }
-//redirect
-header("<Location:website>index.html");
+
 ?>
