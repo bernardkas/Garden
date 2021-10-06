@@ -1,18 +1,24 @@
 
 <?php
 
-if (isset($_POST['submit'])) {
     $name = $_POST['fullname'];
     $visitor_email = $_POST['emailaddress'];
     $tel = $_POST['tel'];
     $message = $_POST['message'];
 
-    $mailto = "berni.kastrati@hotmail.com";
-    $headers = "From: Garden";
-    $txt = "You have recived an e-mail from ".$email.".\n\n".$message;
+    $mail_from = "berni.kastrati@hotmail.com";
+    $email_subject = "From: Garden";
+    $email_body = "User Name: $name.\n".
+                    "User Email: $visitor_email.\n".
+                            "User Phone: $tel.\n".
+                                "User Message: $message.\n";
 
-    mail($mailto, $txt, $headers);
+
+    $to = "berni.kastrati@hotmail.com";
+
+    $headers = "From Garden";
+
+    mail($to, $email_subject, $email_body, $headers);
+
     header("Location: index.html");
-}
-
 ?>
