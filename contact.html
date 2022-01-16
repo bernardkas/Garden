@@ -1,0 +1,157 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <title>Garden</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="header">
+      <nav class="nav">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="" /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html"> Home</a></li>
+          <li><a  href="about.html"> About</a></li>
+          <li><a class="active" href="#form"> Contact</a></li>
+        </ul>
+        <div class="transform-phone">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+
+      <div id="cover_photo" class="blur"></div>
+      <div class="tittle">
+        <h1>Contact US</h1>
+      </div>
+    </section>
+
+    <!-- Address -->
+    <div class="address">
+        <div class="address-1">
+            <i class="fas fa-map-marked"></i>
+            <p>Address: Rr. Dardania I, 10000 Prishtinë, Kosovo</p>
+        </div>
+        <div class="number">
+            <i class="fas fa-phone-alt"></i>
+            <p>Phone: <a href="tel:+436504012560">+43 650 4012560</a></p>
+        </div>
+        <div class="email">
+            <i class="fas fa-envelope"></i>
+            <p>Email : <a href="mailto:iliri3891@gmail.com">iliri3891@gmail.com</a></p>
+        </div>
+        <div class="website">
+            <i class="fas fa-globe-europe"></i>
+            <p>Website: <a href="https://smart-engineering.tech/">www.ikhausbetreuung.au</a></p>
+        </div>
+    </div>
+    <!-- Address END -->
+
+    <!-- Contact fourm -->
+    <form action="mail.php" method="POST" id="fourm">
+        <fieldset>
+          <h1 class="h1-form">Contact Us</h1>
+          <input
+            type="text"
+            name="fullname"
+            id="one"
+            required
+            placeholder="Full Name"
+          />
+          <!-- <input type="text" id="two" name="lastname" placeholder="Lastname"> -->
+          <input
+            type="email"
+            id="three"
+            name="emailaddress"
+            required
+            placeholder="Email"
+          />
+          <br />
+          <input
+            type="tel"
+            id="four"
+            name="tel"
+            placeholder="000-000-000"
+            required
+          /><br />
+          <textarea
+            id="five"
+            name="message"
+            cols="70"
+            rows="4"
+            placeholder="Writte a message..."
+          ></textarea>
+          <br />
+          <!-- <button><a href="#"></a>Submit</button> -->
+          <button id="submitform" type="btn" name="submit" onclick="button()">
+            Submit
+          </button>
+        </fieldset>
+      </form>
+  
+
+
+
+
+     <!-- Footer -->
+     <footer>
+      <div class="footer-box">
+          <div class="footer-box1">
+              <img src="./images/logo.png" alt="">
+              <p>
+                Alles Gärtnern ist Landschaftsmalerei!
+              </p>
+          </div>
+
+          <div class="footer-box2">
+              <h2>Explore</h2>
+              <a href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+          <div class="footer-box3">
+              <h2>Have a Questions?</h2>
+              <p><i class="fas fa-map-marked-alt"></i>Rr. Dardania I, 10000 Prishtinë, Kosovo</p>
+              <p><i class="fas fa-phone-alt"></i><a href="+436504012560"> +43 650 4012560</a></p>
+              <p><i class="fas fa-envelope"></i><a href="mailto:iliri3891@gmail.com "> iliri3891@gmail.com </a></p>
+          </div>
+      </div>
+      <p>Copyright <i class="far fa-copyright"> </i> 2021 All rights reserved | IK-Hausbetreuung </p>
+  
+          <!-- Arrow TOP -->
+          <div class="arrowTop"><a href="contact.html"><i class="fa fa-arrow-down"></i></a></div>
+          <!-- END Arrow Top -->
+  
+    </footer>
+  <!-- Footer END -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

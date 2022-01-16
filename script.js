@@ -24,7 +24,7 @@ const navSlide = () => {
             if(link.style.animation){
                 link.style.animation = '';
             } else{
-                link.style.animation = `navLinkFade 0.5 ease forwards ${index / 7 + 1.5}s`;
+                link.style.animation = `navLinkFade 0.5 ease forwards ${index / 6 + 1.5}s`;
             }
         });
         
@@ -37,18 +37,41 @@ const navSlide = () => {
 navSlide();
 
 
+// Our Service
+let slider = document.getElementById('slider');
+let box = document.getElementsByClassName('box');
 
-// ANIMATE ON SCROLL
+// Maxium moovment
+const maxcrollleft = slider.scrollWidth - slider.clientWidth;
 
-var tl = new TimelineMax({onUpdate:updatePercentage});
-const controller = new ScrollMagic.controller();
+function autoPlay() {
+    if(slider.scrollLeft > (maxcrollleft -1)){
+        slider.scrollLeft -= maxcrollleft;
+    } else{
+        slider.scrollLeft += 1;
+    }
+}
 
-tl.from("welcome", .5, {y:200, opacity: 0});
+let play = setInterval(autoPlay, 10);
+
+for(var i = 0; i < box.length; i++){
+    box[i].addEventListener('mouseover', () => {
+        clearInterval(play)
+    });
+
+    box[i].addEventListener('mouseout', () => {
+        return play =setInterval(autoPlay, 10);
+    });
+}
+// END Our Service
 
 
-
-
-
+// NAV FADE
+window.addEventListener('scroll', function() {
+    var nav = document.querySelector('.nav');
+    nav.classList.toggle('sticky', window.scrollY > 0)
+})
+// FUND NAv Fade
   
     
 

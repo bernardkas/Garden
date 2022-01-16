@@ -1,238 +1,299 @@
 <html lang="en">
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Html5, Css, JS">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="garden" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
     <title>Garden</title>
-    <link rel="icon" href="./images/logo.png">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="script.js">
+    <link rel="icon" href="./images/logo.png" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="script.js" />
   </head>
 
-<body>
-  <!-- Nav -->
+  <body>
+    <!-- Nav -->
 
-  <section class="header">
-     
-        <nav>
-          <div class="logo">
-              <img src="images/logo.png" alt="">
-          </div>
-          <ul class="nav-links">
-              <li><a href="index.html"> Home</a></li>
-              <li><a href="about.html"> About</a></li>
-              <li><a href="#fourm"> Contact</a></li>
-          </ul>
-          <div class="transform-phone">
-              <div class="line1"></div> 
-              <div class="line2"></div>
-              <div class="line3"></div>
-          </div>
+    <section class="header">
+      <nav class="nav">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="" /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a class="active" href="index.html"> Home</a></li>
+          <li><a href="about.html"> About</a></li>
+          <li><a href="contact.html"> Contact</a></li>
+        </ul>
+        <div class="transform-phone">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
       </nav>
 
-    
-        
-        <div id="cover_photo"> </div>
-        <div class="tittle">
-          <h1>Garden</h1>
-        </div>
-   </section>
+      <div id="cover_photo" class="blur"></div>
+      <div class="tittle">
+        <h1>Garden</h1>
+      </div>
+    </section>
 
+    <!-- <div class="affix"> </div> -->
 
- 
-  <!-- <div class="affix"> </div> -->
-
-     <br>
-     <br>
-     <br>
+    <br />
+    <br />
+    <br />
 
     <!-- Welcome status -->
     <section class="welcome">
       <div id="welcome-tittle">
-          <h1>Welcome to the <img src="images/logo.png" alt=""> <br> Services, Company</h1>
-          <p id="p-1">
-            As a leading expert in Insect and Pest Control, Pest Control is
-            dedicated to meeting the pest control needs of household, commercial and industrial customers.
-          </p>
-          <span>Services We Offers</span>
-          <ul>
-            <li> Garden</li>
-            <li> Garden</li>
-            <li> Garden</li>
-            <li> Garden</li>
-          </ul>
+        <h1>
+          Willkommen zu <img src="images/logo.png" alt="" /> <br />
+          Dienstleistungen, Unternehmen
+        </h1>
+        <p id="p-1">
+          Ein Garten ist nie fertig – er ist eine Kreation, die sich von Saison zu Saison und von Jahr zu Jahr entwickelt. Erfahrene Gärtner sind sich dieser Realität bewusst und erfreuen sich sogar an der Kurzlebigkeit ihrer Landschaften. Wenn eine Pflanze aus ihrem vorherigen Zuhause herauswächst oder ihre Leistung nicht mehr ausreicht, wählen sie gerne ihren Ersatz. Wenn die Jahreszeiten wechseln, freuen sie sich, wenn verschiedene Pflanzen im Mittelpunkt stehen, und wenn Dürre oder andere klimatische Bedingungen auftreten, stellen sie sich gerne der Herausforderung.
+        </p>
       </div>
 
       <div id="photo">
-        <img src="images/welcomen.jpg" alt="">
+        <img src="images/welcomen.jpg" alt="" />
       </div>
     </section>
 
+    <!-- Aniamtion Machine -->
+    <div id="animatione-machine">
+      <div id="grass"></div>
+      <div id="machine">
+        <img src="images/machine-bg.png" alt="">
+        <img id="logo-animation" src="images/logo.png" alt="">
+      </div>
+    </div>
+    <!-- END Aniamtion MAchine -->
 
-          <!-- Our service -->
-          <h2 id="we_provide"> We Provide </h2> <br>
+    <!-- Our service -->
+    <h2 id="we_provide">Wir bieten an</h2>
+    <br />
 
-          <div class="box-container">
-              <div class="box">
-                  <div class="img1">
-                     <img src="./images/work.jpg" alt=""> 
-                     <legend id="tittle-project">This is our work</legend>
-                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus nobis </p>
-                     <!-- <button id="projectbt"><a href="projects.html"> See more projects</a></button> -->
-                  </div>
-              </div>
-              <div class="box">
-                <div class="img2">
-                    <img src="./images/work1.jpg"  alt="">
-                    <legend id="tittle-project">This is our work</legend>
-                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus nobis </p>
-                     <!-- <button id="projectbt"><a href="projects.html"> See more projects</a></button> -->
-                </div>
-              </div>
-              <div class="box">
-                <div class="img3">
-                    <img src="./images/work2.jpg" alt="">
-                    <legend id="tittle-project">This is our work</legend>
-                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus nobis </p>
-                     <!-- <button id="projectbt"><a href="projects.html"> See more projects</a></button> -->
-                </div>
-              </div>
-              <div class="box">
-                <div class="img4">
-                    <img src="./images/machineworking.jpg"  alt="">
-                    <legend id="tittle-project">This is our work</legend>
-                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus nobis </p>
-                     <!-- <button id="projectbt"><a href="projects.html"> See more projects</a></button> -->
-                </div>
-              </div>
-              <div class="box">
-                <div class="img5">
-                    <img src="./images/garden.jfif" alt="">
-                    <legend id="tittle-project">This is our work</legend>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus nobis </p>
-                    <!-- <button id="projectbt"><a href="projects.html"> See more projects</a></button> -->
-                </div>
-              </div>
-              <div class="box">
-                <div class="img6">
-                    <img src="./images/prerja.jfif" alt="">
-                    <legend id="tittle-project">This is our work</legend>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus nobis </p>
-                    <!-- <button id="projectbt"><a href="projects.html"> See more projects</a></button> -->
-                </div>
-              </div>
-          </div>
+    <div class="box-container" id="slider">
+      <div class="box">
+        <div class="img1">
+          <img src="./images/work.jpg" alt="" />
+          <legend id="tittle-project">Gebäudereinigungsdienste</legend>
+          <p>
+            Wir sind ein professionelles Gebäudereinigungsunternehmen mit umfassendem Service, das sich auf die Reinigung von Bürogebäuden, 
+            Schulen, Restaurants und anderen gewerblichen Einrichtungen spezialisiert hat.
             
-                    
+          </p>
+          <!-- <button id="projectbt"><a href="projects.html"> See more projects</a></button> -->
+        </div>
+      </div>
+      <div class="box">
+        <div class="img2">
+          <img src="./images/work1.jpg" alt="" />
+          <legend id="tittle-project">Wartung</legend>
+          <p>
+            Um die Gebäudeinstandhaltung durchzuführen, sind die Aufgaben und Verantwortlichkeiten des Gebäudeinstandhaltungspersonals:
+             Reparaturwerkzeuge und -zubehör sauber und organisiert zu halten
+          </p>
+          <!-- <button id="projectbt"><a href="projects.html"> See more projects</a></button> -->
+        </div>
+      </div>
+      <div class="box">
+        <div class="img3">
+          <img src="./images/work2.jpg" alt="" />
+          <legend id="tittle-project">Facility Management</legend>
+          <p>
+            Facility Management (FM) ist ein Beruf, der mehrere Disziplinen umfasst, um Funktionalität, Komfort,
+             Sicherheit und Effizienz der gebauten Umgebung durch die Integration von Menschen.
+          </p>
+          <!-- <button id="projectbt"><a href="projects.html"> See more projects</a></button> -->
+        </div>
+      </div>
+      <div class="box">
+        <div class="img4">
+          <img src="./images/machineworking.jpg" alt="" />
+          <legend id="tittle-project">Maschinenarbeit</legend>
+          <p>
+            Unser Ziel ist es, der Landschaft ein echtes Gefühl der Verbindung von Geist, Körper und Seele zu vermitteln.
+          </p>
+          <!-- <button id="projectbt"><a href="projects.html"> See more projects</a></button> -->
+        </div>
+      </div>
+      <div class="box">
+        <div class="img5">
+          <img src="./images/garden.jfif" alt="" />
+          <legend id="tittle-project">Blumengarten</legend>
+          <p>
+            Bei der Gestaltung einer großartigen Landschaft geht es um mehr, als eine Blumenwiese 
+            zu kaufen und ein paar Sträucher um Ihr Fundament zu kleben.
+          </p>
+          <!-- <button id="projectbt"><a href="projects.html"> See more projects</a></button> -->
+        </div>
+      </div>
+      <div class="box">
+        <div class="img6">
+          <img src="./images/fance.jpg" alt="" />
+          <legend id="tittle-project">Zaun Garten</legend>
+          <p>
+            Ein Zaun kann den Außenbereich abgrenzen, Privatsphäre und Sicherheit bieten und etwas Design-Flair hinzufügen. 
+            Und es gibt viele Ideen für Hof- und Gartenzäune zur Auswahl.
+          </p>
+          <!-- <button id="projectbt"><a href="projects.html"> See more projects</a></button> -->
+        </div>
+      </div>
+    </div>
 
-          <br>
-          <br>
-      <!-- Pest control Section -->
+    <br />
+    <br />
+    <!-- Pest control Section -->
     <section id="pest_control">
       <article id="article-1">
-          <h1>Why People Choose<br> IK Hausbetreuung</h1>
-          <p>Our clients receive guaranteed results due to our professional quality
-            assurance policy that forms a solid ground for our high level of
-            efficiency. We strive to work up to our own high standards by improving
-            the tools and technology.
-          </p>
-
+        <h1>
+          Warum Menschen wählen<br />
+          IK Hausbetreuung
+        </h1>
+        <p>
+          Unsere Kunden erhalten garantierte Ergebnisse durch unsere professionelle 
+          Qualitätssicherung, die eine solide Grundlage für unsere hohe 
+          Effizienz bildet. Wir bemühen uns, unseren eigenen hohen Standards 
+          gerecht zu werden, indem wir die Werkzeuge und die Technologie 
+          verbessern.
+        </p>
       </article>
       <article id="article-2">
-        <img src="images/pest-control.webp">
+        <img src="images/pest-control.webp" />
       </article>
       <article id="article-3">
         <div>
-          <img src="images/Capture1.PNG"> <br>
-          <h3>Comfortable Price</h3>
-          <p>When you embark on your first PPC journey, you need to keep a small number
-            of keywords at first.</p>
-        </div>
-        <div>
-          <img src="images/Capture2.PNG"> <br>
-          <h3>Safe And Clean</h3>
-          <p>It’s usually the creator of a new concept who gets the most mileage
-            from it.
+          <img src="images/Capture1.PNG" /> <br />
+          <h3>Komfortabler Preis</h3>
+          <p>
+            Wenn Sie Ihre erste IK-Reise beginnen, müssen Sie zunächst 
+            eine kleine Anzahl von Keywords beibehalten.
           </p>
         </div>
         <div>
-          <img src="images/Capture3.PNG"> <br>
-          <h3>Friendly Customer Service</h3>
-          <p>Give preference to decorative types, especially it concerns your
-            contact information.
+          <img src="images/Capture2.PNG" /> <br />
+          <h3>Sicher und sauber</h3>
+          <p>
+            In der Regel ist es der Schöpfer eines neuen 
+            Konzepts, der den meisten Nutzen daraus zieht.
+          </p>
+        </div>
+        <div>
+          <img src="images/Capture3.PNG" /> <br />
+          <h3>Freundlicher Kundenservice</h3>
+          <p>
+            Geben Sie dekorativen Typen den Vorzug, insbesondere wenn es um 
+            Ihre Kontaktdaten geht.
           </p>
         </div>
       </article>
     </section>
-           
-          <br>
-          <br>
-          
-          <!-- Contact fourm -->
-          <form action="mail.php" method="POST" id="fourm">
-            <fieldset>
-              <h1 class="h1-form">Contact Us</h1>
-              <input type="text" name="fullname" id="one" required placeholder="Full Name">
-              <!-- <input type="text" id="two" name="lastname" placeholder="Lastname"> -->
-              <input type="email" id="three" name="emailaddress" required placeholder="Email"> <br>
-              <input type="tel" id="four" name="tel" placeholder="000-000-000" required><br>
-              <textarea id="five" name="message" cols="70" rows="4" placeholder="Writte a message..."></textarea> <br>
-              <!-- <button><a href="#"></a>Submit</button> -->
-              <button id="submitform" type="btn" name="submit" onclick="button()">Submit</button>
-            </fieldset>
-          </form>
 
-        
-        <!-- Footer -->
-          
-        <div class="w3hubs-footer">
-        
-          <div class="w3hubs-icon">
-            <ul>
-              <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" target="_blank"><i class="fa fa-google"></i></a></li>
-        
-            </ul>
-          </div>
-          <div class="w3hubs-nav">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-            </ul>
-          </div>
+    <br />
+    <br />
 
-          <div id="numberAndEmail_end">
-            <p>Phone: +43 650 4012560</p>
-            <span>Email: ik.hausbetreuung@gmail.com</span>
-          </div>
-        
-        
-          <div class="w3hubs-nav2">
-            <ul>
-              <li><a href="#" title="To Top"><i class="fa fa-chevron-down"></i></a></li>
-            </ul>
-          </div>
-        
-            <div class="footer-end">
-              <p>Copyright &copy;, All Rights Reserved</p>
+    <!-- Contact fourm -->
+    <form action="mail.php" method="POST" id="fourm">
+      <fieldset>
+        <h1 class="h1-form">Contact Us</h1>
+        <input
+          type="text"
+          name="fullname"
+          id="one"
+          required
+          placeholder="Full Name"
+        />
+        <!-- <input type="text" id="two" name="lastname" placeholder="Lastname"> -->
+        <input
+          type="email"
+          id="three"
+          name="emailaddress"
+          required
+          placeholder="Email"
+        />
+        <br />
+        <input
+          type="tel"
+          id="four"
+          name="tel"
+          placeholder="000-000-000"
+          required
+        /><br />
+        <textarea
+          id="five"
+          name="message"
+          cols="70"
+          rows="4"
+          placeholder="Writte a message..."
+        ></textarea>
+        <br />
+        <!-- <button><a href="#"></a>Submit</button> -->
+        <button id="submitform" type="btn" name="submit" onclick="button()">
+          Submit
+        </button>
+      </fieldset>
+    </form>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-box">
+            <div class="footer-box1">
+                <img src="./images/logo.png" alt="">
+                <p>
+                  Alles Gärtnern ist Landschaftsmalerei!
+                </p>
+            </div>
+
+            <div class="footer-box2">
+                <h2>Explore</h2>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-box3">
+                <h2>Have a Questions?</h2>
+                <p><i class="fas fa-map-marked-alt"></i>Rr. Dardania I, 10000 Prishtinë, Kosovo</p>
+                <p><i class="fas fa-phone-alt"></i><a href="+436504012560"> +43 650 4012560</a></p>
+                <p><i class="fas fa-envelope"></i><a href="mailto:iliri3891@gmail.com "> iliri3891@gmail.com </a></p>
             </div>
         </div>
+        <p>Copyright <i class="far fa-copyright"> </i> 2021 All rights reserved | IK-Hausbetreuung </p>
+    
 
-        
-        
-      
+        <!-- Arrow TOP -->
+    <div class="arrowTop"><a href="index.html"><i class="fa fa-arrow-down"></i></a></div>
+    <!-- END Arrow Top -->
+    
+    
+      </footer>
+    <!-- Footer END -->
 
-          
+
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
-
-</body>
+  </body>
 </html>

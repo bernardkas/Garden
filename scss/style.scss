@@ -1,18 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400&family=PT+Sans+Narrow:wght@700&family=Yusei+Magic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400&family=PT+Sans+Narrow:wght@700&family=Yusei+Magic&display=swap");
 @import "mixins";
 @import "header";
 @import "footer";
 
-
-
-body{
+body {
     background-color: darkgray;
     margin: 0;
+    overflow-x: hidden;
 }
 
+// Animation machine
+#animatione-machine{
+    background-image: url(../images/grass.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    background-position-y: -500px;
+    overflow: hidden;
+    box-shadow: 10px 0 10px 0 darkgreen;
+    position: relative;
+}
+#animatione-machine #machine{
+    animation: machine 15s infinite;
+  }
+
+  @keyframes machine {
+    0%{
+      transform: translateX(0%);
+    }
+    50%{
+      transform: translateX(50%);
+    }
+  
+    100%{
+      transform: translateX(0%);
+    }
+  }
+
+  @media (max-width: 1300px) {
+      
+    @keyframes machine {
+        0%{
+          transform: translateX(0%);
+        }
+        50%{
+          transform: translateX(40%);
+        }
+      
+        100%{
+          transform: translateX(0%);
+        }
+      }
+  }
+
+  @media (max-width: 940px) {
+    #animatione-machine{
+        background-position-y: -550px;
+    }  
+    #machine img{
+          width: 300px;
+      }
+    #machine #logo-animation{
+        display: none;
+    }
+    @keyframes machine {
+        0%{
+          transform: translateX(0%);
+        }
+        50%{
+          transform: translateX(40%);
+        }
+      
+        100%{
+          transform: translateX(0%);
+        }
+      }
+  }
+
+  @media (max-width: 1070px) {
+      
+    @keyframes machine {
+        0%{
+          transform: translateX(0%);
+        }
+        50%{
+          transform: translateX(30%);
+        }
+      
+        100%{
+          transform: translateX(0%);
+        }
+      }
+  }
+
+// END Animatione Machine
 
 // Welcome status
-.welcome{
+.welcome {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-around;
@@ -21,31 +105,29 @@ body{
     height: auto;
     background: darkgray;
     padding-bottom: 100px;
-    
-    // transition: all 2s ease-in;
 
-    #welcome-tittle{
+    transition: all 2s ease-in;
+
+    #welcome-tittle {
         padding: 6px 30px;
 
-
-        h1{
+        h1 {
             font-size: 40px;
             vertical-align: middle;
             padding-bottom: 30px;
         }
-        p{
-            font-size: 20px;
+        p {
+            font-size: 15px;
         }
 
-        img{
+        img {
             vertical-align: baseline;
         }
-        #p-1{
+        #p-1 {
             width: 400px;
         }
-        
     }
-     #photo img{
+    #photo img {
         position: relative;
         // background-image: url(../images/welcomen.jpg);
         background-repeat: no-repeat;
@@ -55,33 +137,29 @@ body{
         width: 500px;
         height: 400px;
     }
-
 }
 
 @media (max-width: 860px) {
-    .welcome #photo{
+    .welcome #photo {
         display: inline;
     }
 }
 
-
 @media (max-width: 550px) {
-    .welcome{
+    .welcome {
         position: relative;
         padding-left: 20px;
 
-        #welcome-tittle{
-
-            #p-1{
-                 width: 300px;
-               
+        #welcome-tittle {
+            #p-1 {
+                width: 300px;
             }
         }
-        #photo{
+        #photo {
             padding-right: 30px;
         }
 
-        #photo img{
+        #photo img {
             width: 300px;
             height: 300px;
         }
@@ -90,130 +168,155 @@ body{
 
 // ----------------------------------------------------------------------------------------
 
-//  Our Project
-#we_provide{
+//  Our service
+#we_provide {
     text-align: center;
     color: black;
-    font-size: 50px;
+    font-size: 40px;
     padding-top: 60px;
     padding-bottom: 60px;
     text-transform: uppercase;
     font-weight: bold;
     font-family: initial;
-    
 }
 
-.box-container{
+.box-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    flex-flow: wrap;
-    width: 100%;
+    overflow-x: scroll;
     height: auto;
     background: darkgray;
     padding-bottom: 100px;
+    margin: 0 100px;
 
-       .box{
-                height: 360px;
-                width: 404px;
-                margin: 20px;
-                box-sizing: border-box;
-                border-radius: 10px 20px 50px;
-                background: rgb(58,217,37);
-                    background: radial-gradient(circle, rgba(58,217,37,1) 0%, rgba(51,119,7,1) 54%);  
-                    box-shadow: 15px 15px 30px black;    
-                
-                p{
-                    text-align: left;
-                    margin: 20px;
-                }
-                
+    .box {
+        height: 380px;
+        width: 404px;
+        margin: 20px;
+        box-sizing: border-box;
+        border-radius: 10px 20px 50px;
+        background: rgb(58, 217, 37);
+        background: radial-gradient(circle, rgba(58, 217, 37, 1) 0%, rgba(51, 119, 7, 1) 54%);
+        box-shadow: 15px 15px 30px black;
 
-            .img1 img{
-                background-size: cover;
-                width: 404px;
-                height: 203px;
-            }
-            .img2 img{
-                background-size: cover;
-                width: 404px;
-                height: 203px;
-            }
-            .img3 img{
-                background-size: cover;
-                width: 404px;
-                height: 203px;
-            }
-            .img4 img{
-                background-size: cover;
-                width: 404px;
-                height: 203px;
-            }
-            .img5 img{
-                background-size: cover;
-                width: 404px;
-                height: 203px;
-            }
-            .img6 img{
-                background-size: cover;
-                width: 404px;
-                height: 203px;
-            }
-            
-            .img1, .img2, .img3, .img4, .img5, .img6{
-                    img{
-                        border-radius: 10px 20px 20px 20px;
-                    }
-                }
-            
+        p {
+            text-align: left;
+            margin: 20px;
         }
-           
-       #tittle-project{
+
+        .img1 img {
+            background-size: cover;
+            width: 404px;
+            height: 203px;
+        }
+        .img2 img {
+            background-size: cover;
+            width: 404px;
+            height: 203px;
+        }
+        .img3 img {
+            background-size: cover;
+            width: 404px;
+            height: 203px;
+        }
+        .img4 img {
+            background-size: cover;
+            width: 404px;
+            height: 203px;
+        }
+        .img5 img {
+            background-size: cover;
+            width: 404px;
+            height: 203px;
+        }
+        .img6 img {
+            background-size: cover;
+            width: 404px;
+            height: 203px;
+        }
+
+        .img1,
+        .img2,
+        .img3,
+        .img4,
+        .img5,
+        .img6 {
+            img {
+                border-radius: 10px 20px 20px 20px;
+            }
+        }
+    }
+    .box:hover{
+        transform: scale(1.1);
+        
+    }
+
+    #tittle-project {
         text-align: center;
         font-family: cursive;
         font-weight: bold;
-    } 
-
+    }
 }
-
+.box-container::-webkit-scrollbar{
+    height: 5px;
+    width: 2px;
+    border: 1px solid dodgerblue;
+    background-color: black;
+}
+.box-container::-webkit-scrollbar-track{
+    --webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+}
+.box-container::-webkit-scrollbar-thumb{
+    background-color: darkgreen;
+    outline: 1px solid black;
+}
+@media (max-width: 865px) {
+    .box-container{
+        margin: 0;
+    }
+}
 @media (max-width: 450px) {
     .box-container {
-         padding-left: 20px;
+        padding-left: 20px;
     }
-    .box-container .box{
+    .box-container .box {
         height: 350px;
         width: 300px;
 
-        .img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img{
+        .img1 img,
+        .img2 img,
+        .img3 img,
+        .img4 img,
+        .img5 img,
+        .img6 img {
             width: 300px;
         }
     }
-    
-    
 }
 
-
 // ---------------------------------------------------------------------------------
- 
+
 // Contact
-#fourm{
+#fourm {
     padding: 15px;
     padding-top: 20px;
     background-position: center;
     background-image: url(../images/form.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin: 0%;
 
-    .h1-form{
+    .h1-form {
         color: aliceblue;
         font-size: 30px;
-        font-weight:bold;
+        font-weight: bold;
         padding-bottom: 20px;
-        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
         padding-left: 20px;
         text-transform: uppercase;
     }
-    fieldset{
+    fieldset {
         margin: 35px;
         border-radius: 5px;
         opacity: 0.9;
@@ -221,44 +324,46 @@ body{
         border-radius: 8px;
         display: inline-block;
     }
-    
-    input{
+
+    input {
         padding: 10px;
         margin: 15px;
         background-color: rgb(221, 217, 217);
         border: none;
         border-radius: 3px;
+        outline: none;
     }
-    
-    
-    fieldset #one{
+
+    fieldset #one {
         width: 50%;
     }
-    #submitform{
+    #submitform {
         padding: 10px;
         width: 120px;
-        background-color:  rgb(26, 135, 236);
+        background-color: rgb(26, 135, 236);
         border: none;
         margin: 11px;
         border-radius: 7px;
-    
+        color: wheat;
+        font-weight: bold;
     }
-    
-    fieldset #three{
+
+    fieldset #three {
         width: 78%;
     }
-    fieldset #four{
-         width: 78%;
-        
-     }
-     fieldset #five{
-         position: relative;
-         resize: none;
-         width: 78%;
-         left: 15px;
-      background-color: rgb(221, 217, 217);
+    fieldset #four {
+        width: 78%;
     }
-    #email{
+    fieldset #five {
+        position: relative;
+        resize: none;
+        width: 78%;
+        left: 15px;
+        background-color: rgb(221, 217, 217);
+        outline: none;
+        border: none;
+    }
+    #email {
         text-transform: uppercase;
         color: rgb(0, 95, 13);
         background-color: darkgray;
@@ -268,79 +373,50 @@ body{
         font-weight: bold;
         border-radius: 5px;
     }
-    
-        &:hover{
-            transition: 0.8s;
-            }
 
-        #call{
-            color: rgb(0, 95, 13);
-            left: 500px;
-            background-color: darkgray;
-            width: 210px;
-            padding: 10px 10px 5px;
-            border-radius: 5px;
-            font-size: 17px;
-            font-weight: bold;
-            margin-left: 20px;
-        }
-            
+    &:hover {
+        transition: 0.8s;
+    }
+
+    #call {
+        color: rgb(0, 95, 13);
+        left: 500px;
+        background-color: darkgray;
+        width: 210px;
+        padding: 10px 10px 5px;
+        border-radius: 5px;
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
 }
 
 // ------------------------------------------------------------------------------------------
 
 
-    // contact.html box
-    .second-box{
-        width: 40%;
-        flex-flow: wrap;
-        text-align: center;
-        text-align: left;
-        padding-left: 20px;
-
-        p{
-            font-size: 30px;
-            font-weight:500;
-        }
-        address{
-            text-align: left;
-            font-size: 17px;
-            font-weight: 500;
-        }
-        @media (max-width: 500px) {
-            address{
-                font-size: 15px;
-            }
-        }
-        
-    }
-
-
 // -----------------------------------------------------------------------------------
 
-
-    /* Pest Control */
-#pest_control{
+/* Pest Control */
+#pest_control {
     padding: 1% 7%;
     display: flex;
-    
 }
 
-#pest_control #article-1{
+#pest_control #article-1 {
     display: inline-block;
     position: relative;
 
-    h1{
-        font-size: 42px;
+    h1 {
+        font-size: 35px;
         color: #0d0d0d;
         font-weight: 700;
         line-height: 52px;
         margin-bottom: 32px;
     }
 
-    p{
+    p {
         width: 50%;
-        margin-bottom:35px;
+        margin-bottom: 35px;
         font-size: 18px;
         font-weight: 400;
         line-height: 25px;
@@ -348,41 +424,39 @@ body{
     }
 }
 
-
-#pest_control #article-2 img{
-    position:relative;
+#pest_control #article-2 img {
+    position: relative;
     right: 120px;
     height: 450px;
     border-radius: 0px 40px 0px 70px;
 }
 
 @media (max-width: 1300px) {
-    #pest_control #article-2 img{
+    #pest_control #article-2 img {
         display: none;
     }
 }
 
 @media (max-width: 500px) {
-    #pest_control{
+    #pest_control {
         display: block;
     }
 
-    #pest_control #article-1 h1{
+    #pest_control #article-1 h1 {
         font-size: 26px;
         padding: 0;
         margin: 0;
         font-weight: 900;
     }
 
-    #pest_control #article-1 p{
+    #pest_control #article-1 p {
         font-size: 22px;
         width: 70%;
     }
 
-     #pest_control #article-2 #center_img{
-         display: block;
-     }
-
+    #pest_control #article-2 #center_img {
+        display: block;
+    }
 }
 
 @media (max-width: 500px) {
@@ -390,7 +464,7 @@ body{
         padding-top: 30px;
         padding-left: 30px;
 
-        p{
+        p {
             width: 70%;
             font-size: 20px;
         }
@@ -398,44 +472,5 @@ body{
 }
 
 // ----------------------------------------------------------------------------------
-
-// About company post about.html
-.about-company{
-
-    #company-found{
-        h1{
-            text-align: center;
-            padding-bottom: 40px;
-            padding-top: 80px;
-        }
-        p{
-            padding: 10px 200px;
-            text-align: center;
-            margin: auto;
-            font-size: 20px;
-            padding-bottom: 100px;
-        }
-        @media (max-width: 600px) {
-            p{
-                font-size: 15px;
-                padding: 1px 50px;
-            }
-            
-        }
-    }
-}
-
-
-    
-    
-
-
-
-
-
-
-
-
-
 
 
